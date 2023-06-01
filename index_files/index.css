@@ -1,0 +1,128 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.custom {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid black;
+  padding-bottom: 30px;
+}
+input[id=chk1],
+input[id=chk2] {
+  display: none;
+}
+label[for=chk1] {
+  cursor: pointer;
+}
+
+.custom label em {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+  background-position: left center;
+}
+
+.custom label[for=chk1] em {
+  background: url(/images/checkbox-01.png) no-repeat;
+}
+
+.custom label[for=chk2] em {
+  background: url(../images/checkbox-02.png) no-repeat;
+}
+
+
+.custom input[type=checkbox]:checked + label em {
+  background-position: right center;
+}
+
+.custom-2 {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid black;
+  padding-bottom: 30px;
+}
+input[id=chk3],
+input[id=chk4] {
+  display: none;
+}
+label[for=chk1],
+label[for=chk2],
+label[for=chk3],
+label[for=chk4] {
+  cursor: pointer;
+}
+
+.custom-2 label em {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+  background-position: left center;
+}
+
+.custom-2 label[for=chk3] em {
+  background: url(../images/checkbox-03.png) no-repeat;
+}
+
+.custom-2 label[for=chk4] em {
+  background: url(../images/checkbox-04.png) no-repeat;
+}
+
+
+.custom-2 input[type=checkbox]:checked + label em {
+  background-position: right center;
+}
+
+.grade {
+  width: 500px;
+  border-bottom: 1px solid black;
+  padding-bottom: 30px;
+}
+
+.grade input[type=radio] {
+  display: none;
+}
+
+label[for=stu1],
+label[for=stu2],
+label[for=stu3],
+label[for=stu4] {
+  cursor: pointer;
+}
+
+.grade label em {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  margin-right: 5px;
+  background: url(../images/radio-01.png) no-repeat;
+  background-position: left center;
+}
+
+.grade input[type=radio]:checked + label em {
+  background-position: right center;
+}
+
+.grade input[type=radio]:checked + label {
+  color: crimson;
+}
+
+@media screen and (max-width: 400px) {
+  .custom,
+  .custom-2,
+  .grade {
+    width: 100%;
+  }
+}
